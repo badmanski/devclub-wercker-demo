@@ -1,0 +1,15 @@
+version: '3.1'
+
+volumes:
+  bundle:
+
+services:
+  web:
+    image: ruby:2.5.1-slim
+    working_dir: /app
+    command: bundle exec rackup -p 4000 -o 0.0.0.0
+    ports:
+      - '4000:4000'
+    volumes:
+      - .:/app
+      - bundle:/usr/local/bundle
