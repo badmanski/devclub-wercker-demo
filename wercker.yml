@@ -1,0 +1,13 @@
+box: ruby:2.5.1
+
+build:
+  steps:
+    - bundle-install
+
+    - script:
+      name: rubocop
+      code: bundle exec rubocop
+
+    - script:
+      name: rspec
+      code: bundle exec rspec
