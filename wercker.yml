@@ -5,11 +5,11 @@ build:
     - bundle-install
 
     - script:
-      name: rubocop
+      name: lint
       code: bundle exec rubocop
 
     - script:
-      name: rspec
+      name: test
       code: bundle exec rspec
 
 store:
