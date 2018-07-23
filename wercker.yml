@@ -21,3 +21,7 @@ store:
       password: $DOCKERHUB_PASSWORD
       tag: $WERCKER_GIT_COMMIT
       repository: badmanski/devclub-wercker-demo
+
+deploy:
+  steps:
+    - heroku-deploy
