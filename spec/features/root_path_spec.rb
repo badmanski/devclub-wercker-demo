@@ -3,7 +3,7 @@ RSpec.describe 'Root path', type: :feature do
     visit '/'
 
     within '.container' do
-      expect(page).to have_content 'Hello, world!'
+      expect(page).to have_content 'Hello, Devclub!'
     end
   end
 end
